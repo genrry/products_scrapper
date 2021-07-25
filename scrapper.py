@@ -8,10 +8,10 @@ options.add_argument('--incognito')
 options.add_argument("--headless")
 options.add_argument("--disable-dev-shm-usage")
 options.add_argument("--no-sandbox")
-# options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-# browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=options)
-options.binary_location = brave_path
-browser = webdriver.Chrome(executable_path=driver_path, options=options)
+options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=options)
+# options.binary_location = brave_path
+# browser = webdriver.Chrome(executable_path=driver_path, options=options)
 browser.get("https://www.rappi.com.co/login")
 browser.implicitly_wait(20)
 phone_number_field = browser.find_elements_by_css_selector('div.input-phone input')[0]
