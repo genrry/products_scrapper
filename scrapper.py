@@ -10,7 +10,7 @@ def access_page():
     options.add_argument("--headless")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--no-sandbox")
-    options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+    # options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
     driver = webdriver.Chrome(
         # executable_path=os.environ.get("CHROMEDRIVER_PATH"), 
         options=options
